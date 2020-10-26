@@ -1,3 +1,4 @@
+//此webpack的配置文件已经抽离为build目录下(即此配置文件无用)
 const path = require('path'); //添加依赖
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack') //版权声明
@@ -44,15 +45,7 @@ module.exports = {
             name: 'img/[name].[hash:8].[ext]'
           },
         }]
-      },{
-        test: /\.(png|svg|jpg|gif)$/,
-        use: {
-            loader: 'file-loader',
-            options: {
-                name:'img/[name].[ext]',
-            }
-        }
-      },    
+      },   
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
